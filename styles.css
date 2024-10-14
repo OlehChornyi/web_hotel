@@ -184,7 +184,7 @@ nav {
     padding-block: 0;
 }
 
-.booking__form{
+.booking__form {
     padding: 2rem;
     display: flex;
     gap: 1rem;
@@ -197,7 +197,7 @@ nav {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.input__group{
+.input__group {
     flex: 1 1 220px;
     display: flex;
     align-items: center;
@@ -205,17 +205,17 @@ nav {
     gap: 1rem;
 }
 
-.input__group span{
+.input__group span {
     font-size: 1.75rem;
     color: var(--primary-color);
 }
 
-.input__group label{
+.input__group label {
     font-weight: 500;
     color: var(--text-dark);
 }
 
-.input__group input{
+.input__group input {
     display: block;
     width: 100%;
     max-width: 150px;
@@ -226,8 +226,105 @@ nav {
     border: none;
 }
 
-.input__group input::placeholder{
+.input__group input::placeholder {
     color: var(--text-light);
+}
+
+.about__container {
+    overflow: hidden;
+    display: grid;
+    gap: 2rem;
+}
+
+.about__image img {
+    max-width: 450px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.room__grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.room__card {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.room__card image {
+    position: relative;
+    isolation: isolate;
+}
+
+.room__card__icons {
+    position: relative;
+    right: 1rem;
+    bottom: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.room__card__icons span {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 1.5rem;
+    background-color: var(--white);
+    border-radius: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.room__card__icons span:nth-child(1) {
+    color: #f472b6;
+}
+
+.room__card__icons span:nth-child(2) {
+    color: #c084fc;
+}
+
+.room__card__icons span:nth-child(3) {
+    color: #60a5fa;
+}
+
+.room__card__details {
+    padding: 1rem;
+}
+
+.room__card h4 {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.room__card p {
+    margin-bottom: .5rem;
+    color: var(--text-light);
+}
+
+.room__card h5 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.room__card h5 span {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+@media (width > 576px) {
+    .room__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (width > 768px) {
@@ -275,5 +372,20 @@ nav {
 
     .nav__links a:hover::after {
         width: 100%;
+    }
+
+    .about__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .room__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(width > 1024px) {
+    .room__grid {
+        gap: 2 rem;
     }
 }
